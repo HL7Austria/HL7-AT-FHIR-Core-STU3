@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://hl7.at/fhir/3.0/StructureDefinition/AustrianPatient" />
+  <version value="0.1" />
+  <name value="AustrianPatient" />
+  <title value="Patient, Austrian base profile" />
+  <status value="draft" />
+  <experimental value="false" />
+  <date value="2018-05-17" />
+  <publisher value="HL7 Austria, TC FHIR" />
+  <contact>
+    <name value="HL7 Austria, TC FHIR" />
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.at/technische-kommitees/tc-fhir" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <purpose value="This resource defines a patient in the context of a human person being treated in Austria. This does not necessitate the patient to be of Austrian Nationality, and not all data elements for treatment need to be known." />
+  <copyright value="HL7 Austria" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient.name">
+      <path value="Patient.name" />
+      <min value="1" />
+    </element>
+    <element id="Patient.gender">
+      <path value="Patient.gender" />
+      <min value="1" />
+    </element>
+    <element id="Patient.address">
+      <path value="Patient.address" />
+      <type>
+        <code value="Address" />
+        <profile value="http://hl7.at/fhir/3.0/StructureDefinition/AustrianAddress" />
+      </type>
+    </element>
+    <element id="Patient.contact.address">
+      <path value="Patient.contact.address" />
+      <type>
+        <code value="Address" />
+        <profile value="http://hl7.at/fhir/3.0/StructureDefinition/AustrianAddress" />
+      </type>
+    </element>
+    <element id="Patient.animal">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Animal" />
+      </extension>
+      <path value="Patient.animal" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
