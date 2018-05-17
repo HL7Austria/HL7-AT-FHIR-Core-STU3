@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://hl7.at/fhir/3.0/AustrianAddressStreetNumber" />
+  <version value="0.1" />
+  <name value="AustrianAddressStreetNumber" />
+  <title value="AustrianAddress.streetNumber, Austrian Base Profile" />
+  <status value="draft" />
+  <date value="2018-05-17" />
+  <publisher value="HL7 Austria, TC FHIR" />
+  <contact>
+    <name value="HL7 Austria, TC FHIR" />
+    <telecom>
+      <system value="url" />
+      <value value="http://hl7.at/technische-kommitees/tc-fhir" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <purpose value="StreetNumber part of the Austrian Address" />
+  <copyright value="HL7 Austria" />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="datatype" />
+  <context value="Address" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.at/fhir/3.0/AustrianAddressStreetNumber" />
+    </element>
+    <element id="Extension.value[x]:valueString">
+      <path value="Extension.valueString" />
+      <sliceName value="valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
