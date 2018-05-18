@@ -55,6 +55,18 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/patient-religion" />
       </type>
     </element>
+    <element id="Patient.extension:birthplace">
+      <path value="Patient.extension" />
+      <sliceName value="birthplace" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.at/fhir/3.0/StructureDefinition/AustrianBirthPlaceAddressRepresentationExtension" />
+      </type>
+    </element>
     <element id="Patient.name">
       <path value="Patient.name" />
       <min value="1" />
