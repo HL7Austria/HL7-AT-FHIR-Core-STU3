@@ -37,14 +37,14 @@
       <path value="Patient.address" />
       <type>
         <code value="Address" />
-        <profile value="http://hl7.at/fhir/3.0/StructureDefinition/AustrianAddress" />
+        <profile value="http://hl7.at/fhir/3.0/StructureDefinition/AustrianRepresentationOfAddress" />
       </type>
     </element>
     <element id="Patient.contact.address">
       <path value="Patient.contact.address" />
       <type>
         <code value="Address" />
-        <profile value="http://hl7.at/fhir/3.0/StructureDefinition/AustrianAddress" />
+        <profile value="http://hl7.at/fhir/3.0/StructureDefinition/AustrianRepresentationOfAddress" />
       </type>
     </element>
     <element id="Patient.animal">

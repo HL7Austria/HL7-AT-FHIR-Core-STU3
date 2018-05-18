@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://hl7.at/fhir/3.0/StructureDefinition/AustrianAddress" />
+  <url value="http://hl7.at/fhir/3.0/StructureDefinition/AustrianRepresentationOfAddress" />
   <version value="0.1" />
-  <name value="AustrianAddress" />
+  <name value="AustrianRepresentationOfAddress" />
   <title value="Address, Austrian base profile" />
   <status value="draft" />
   <date value="2018-05-17" />
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <purpose value="This profile defines the necessary additions (extensions) to correclty represent the austrian postal system." />
+  <purpose value="This profile defines the necessary additions (extensions) to correclty represents addresses in Austrian healthcare systems. It does NOT necessarily represent an address in Austria." />
   <copyright value="HL7 Austria" />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
@@ -37,8 +37,6 @@
     <element id="Address.extension:street">
       <path value="Address.extension" />
       <sliceName value="street" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -48,8 +46,6 @@
     <element id="Address.extension:streetNumber">
       <path value="Address.extension" />
       <sliceName value="streetNumber" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -59,8 +55,6 @@
     <element id="Address.extension:floorNumber">
       <path value="Address.extension" />
       <sliceName value="floorNumber" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -70,8 +64,6 @@
     <element id="Address.extension:doorNumber">
       <path value="Address.extension" />
       <sliceName value="doorNumber" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -81,8 +73,6 @@
     <element id="Address.extension:additionalInformation">
       <path value="Address.extension" />
       <sliceName value="additionalInformation" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.at/fhir/3.0/AustrianAddressAdditionalInformation" />
