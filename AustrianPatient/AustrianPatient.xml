@@ -38,8 +38,6 @@
     <element id="Patient.extension:citicenship">
       <path value="Patient.extension" />
       <sliceName value="citicenship" />
-      <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/patient-citizenship" />
@@ -48,8 +46,6 @@
     <element id="Patient.extension:religion">
       <path value="Patient.extension" />
       <sliceName value="religion" />
-      <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/patient-religion" />
@@ -60,12 +56,61 @@
       <sliceName value="birthplace" />
       <short value="Optional Extensions Element" />
       <definition value="Optional Extension Element - found in all resources." />
-      <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.at/fhir/3.0/StructureDefinition/AustrianBirthPlaceAddressRepresentationExtension" />
       </type>
+    </element>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.identifier:socialSecurityNumber">
+      <path value="Patient.identifier" />
+      <sliceName value="socialSecurityNumber" />
+      <max value="1" />
+    </element>
+    <element id="Patient.identifier:socialSecurityNumber.system">
+      <path value="Patient.identifier.system" />
+      <fixedUri value="urn:oid:1.2.40.0.10.1.4.3.1" />
+    </element>
+    <element id="Patient.identifier:socialSecurityNumber.assigner.reference">
+      <path value="Patient.identifier.assigner.reference" />
+      <fixedString value="https://www.gesundheit.gv.at/OID_Frontend/oiddetail.htm?smallView=true&amp;actualOid=1.2.40.0.10.1.4.3.1" />
+    </element>
+    <element id="Patient.identifier:socialSecurityNumber.assigner.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.identifier.assigner.display" />
+      <fixedString value="OID-Portal Österreich" />
+    </element>
+    <element id="Patient.identifier:bPK-GH">
+      <path value="Patient.identifier" />
+      <sliceName value="bPK-GH" />
+      <max value="1" />
+    </element>
+    <element id="Patient.identifier:bPK-GH.system">
+      <path value="Patient.identifier.system" />
+      <fixedUri value="urn:oid:1.2.40.0.10.2.1.1.149" />
+    </element>
+    <element id="Patient.identifier:bPK-GH.assigner.reference">
+      <path value="Patient.identifier.assigner.reference" />
+      <fixedString value="https://www.gesundheit.gv.at/OID_Frontend/oiddetail.htm?smallView=true&amp;actualOid=1.2.40.0.10.2.1.1.149" />
+    </element>
+    <element id="Patient.identifier:bPK-GH.assigner.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Patient.identifier.assigner.display" />
+      <fixedString value="OID-Portal Österreich" />
     </element>
     <element id="Patient.name">
       <path value="Patient.name" />
