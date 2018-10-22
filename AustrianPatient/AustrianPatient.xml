@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://hl7.at/fhir/3.0/StructureDefinition/AustrianPatient" />
   <version value="0.1" />
@@ -113,7 +113,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Patient.identifier.assigner.display" />
-      <fixedString value="OID-Portal Österreich" />
+      <fixedString value="Hauptverband der österreichischen Sozialversicherungsträger" />
     </element>
     <element id="Patient.identifier:bPK">
       <path value="Patient.identifier" />
@@ -152,6 +152,7 @@
     <element id="Patient.identifier:localPatientId">
       <path value="Patient.identifier" />
       <sliceName value="localPatientId" />
+      <max value="1" />
     </element>
     <element id="Patient.identifier:localPatientId.type.coding.system">
       <path value="Patient.identifier.type.coding.system" />
@@ -167,44 +168,6 @@
       </extension>
       <path value="Patient.identifier.type.coding.display" />
       <fixedString value="Patient internal identifier" />
-    </element>
-    <element id="Patient.identifier:EKVK-TODOTypeCodeTypeDisplay">
-      <path value="Patient.identifier" />
-      <sliceName value="EKVK-TODOTypeCodeTypeDisplay" />
-    </element>
-    <element id="Patient.identifier:EKVK-TODOTypeCodeTypeDisplay.type.coding.system">
-      <path value="Patient.identifier.type.coding.system" />
-      <fixedUri value="http://hl7.org/fhir/v2/0203" />
-    </element>
-    <element id="Patient.identifier:EKVK-TODOTypeCodeTypeDisplay.type.coding.code">
-      <path value="Patient.identifier.type.coding.code" />
-      <fixedCode value="TODO" />
-    </element>
-    <element id="Patient.identifier:EKVK-TODOTypeCodeTypeDisplay.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Patient.identifier.type.coding.display" />
-      <fixedString value="TODO" />
-    </element>
-    <element id="Patient.identifier:EKVK-TODOTypeCodeTypeDisplay.system">
-      <path value="Patient.identifier.system" />
-      <fixedUri value="urn:oid:1.2.40.0.10.1.4.3.8" />
-    </element>
-    <element id="Patient.identifier:EKVK-TODOTypeCodeTypeDisplay.assigner.reference">
-      <path value="Patient.identifier.assigner.reference" />
-      <fixedString value="https://www.gesundheit.gv.at/OID_Frontend/oiddetail.htm?smallView=true&amp;actualOid=1.2.40.0.10.1.4.3.8" />
-    </element>
-    <element id="Patient.identifier:EKVK-TODOTypeCodeTypeDisplay.assigner.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Patient.identifier.assigner.display" />
-      <fixedString value="Hauptverband der österreichischen Sozialversicherungsträger " />
-    </element>
-    <element id="Patient.identifier:TODONeugeborenenID">
-      <path value="Patient.identifier" />
-      <sliceName value="TODONeugeborenenID" />
     </element>
     <element id="Patient.name">
       <path value="Patient.name" />
