@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://hl7.at/fhir/3.0/StructureDefinition/AustrianRepresentationOfAddress" />
   <version value="0.1" />
@@ -77,6 +77,86 @@
         <code value="Extension" />
         <profile value="http://hl7.at/fhir/3.0/AustrianAddressAdditionalInformation" />
       </type>
+    </element>
+    <element id="Address.line.extension">
+      <path value="Address.line.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.line.extension:street">
+      <path value="Address.line.extension" />
+      <sliceName value="street" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" />
+      </type>
+    </element>
+    <element id="Address.line.extension:street.valueString:valueString">
+      <path value="Address.line.extension.valueString" />
+      <sliceName value="valueString" />
+    </element>
+    <element id="Address.line.extension:streetNumber">
+      <path value="Address.line.extension" />
+      <sliceName value="streetNumber" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" />
+      </type>
+    </element>
+    <element id="Address.line.extension:streetNumber.valueString:valueString">
+      <path value="Address.line.extension.valueString" />
+      <sliceName value="valueString" />
+    </element>
+    <element id="Address.line.extension:floorNumber">
+      <path value="Address.line.extension" />
+      <sliceName value="floorNumber" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitType" />
+      </type>
+    </element>
+    <element id="Address.line.extension:floorNumber.valueString:valueString">
+      <path value="Address.line.extension.valueString" />
+      <sliceName value="valueString" />
+    </element>
+    <element id="Address.line.extension:doorNumber">
+      <path value="Address.line.extension" />
+      <sliceName value="doorNumber" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitType" />
+      </type>
+    </element>
+    <element id="Address.line.extension:doorNumber.valueString:valueString">
+      <path value="Address.line.extension.valueString" />
+      <sliceName value="valueString" />
+    </element>
+    <element id="Address.line.extension:additionalInformation">
+      <path value="Address.line.extension" />
+      <sliceName value="additionalInformation" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator" />
+      </type>
+    </element>
+    <element id="Address.line.extension:additionalInformation.valueString:valueString">
+      <path value="Address.line.extension.valueString" />
+      <sliceName value="valueString" />
     </element>
     <element id="Address.district">
       <path value="Address.district" />
