@@ -1,7 +1,7 @@
 # Contributing to hl7-at-fhir-profiles
 
-The following is a set of guidelines for contributing to the hl7-at-fhir-profiles project and its packages, 
-which are hosted in the HL7-Austria Organization on GitHub. These are mostly guidelines, not rules. Use your best judgment, 
+The following is a set of guidelines for contributing to the hl7-at-fhir-profiles project and its packages,
+which are hosted in the HL7-Austria Organization on GitHub. These are mostly guidelines, not rules. Use your best judgment,
 and feel free to propose changes to this document in a pull request.
 
 <!-- TOC -->
@@ -44,7 +44,7 @@ This project and everyone participating in it is governed by HL7 Austria FHIR Te
 - TBD
 
 ### Request New Profiles/Extensions
-In order to request a new Profile or an Extension either create an issue with the label `enhancement` or send an email to [tc-fhir](mailto:tcfhir@hl7.at) 
+In order to request a new Profile or an Extension either create an issue with the label `enhancement` or send an email to [tc-fhir](mailto:tcfhir@hl7.at)
 Use the issue to describe the intented use case and if applicable state some examples.
 
 #### How Do I Submit a (Good) Enhancement
@@ -71,7 +71,71 @@ A commit message must start with the correspoinding ticket number in GitHub (#TI
 
 ### Naming Conventions
 
-- TBD (depends on results from issue #14)
+In general the HL7 [FHIR naming conventions](http://wiki.hl7.org/index.php?title=FHIR_Guide_to_Designing_Resources#Naming_Rules_.26_Guidelines) apply. Essentially these conventions ask for **consistency** and **precision** (i.e. minimizing ambiguity, while ensuring the meaning is easily understood) when naming fields, resources or operations.
+
+Most of these guidelines are suggestions, except the following rules that *must* be followed:
+-  be lowerCamelCase for elements, UpperCamelCase for resources, be lowercase for operations
+-  be U.S. English (spelled correctly!)
+-  be expressed as a noun, with a preceding adjective where necessary to clarify the semantics and to make unique
+-  not make use of trade-marked terms
+
+#### Profile Naming conventions
+
+A profile follows a prefix pattern, meaning that a name from left to right goes from specific to generic. It uses UpperCamelCase.
+
+**ProfileName** = [*Realm*-] *Use* , *ParentProfile*
+**Realm** = Is this profile supposed to be used in a realm? Then use the **countryCode**
+**Use** = What is this profile used for? **UpperCamelCase**
+**ParentProfile** =  Which profile does this profile extend from? **UpperCamelCase**
+
+Example: Patient used in Austria, for ELGA.
+```
+Realm = Austria -> at- (country code)
+Use = ELGA -> Elga
+ParentProfile = Patient -> Patient
+at-ElgaPatient
+```
+
+Example: Patient minimal information for Patient Summary in any Realm
+```
+Realm = any -> no prefix
+Use = Patient Summary -> PatientSummary
+ParentProfile = Patient -> Patient
+PatientSummaryPatient
+```
+
+#### Extension Naming conventions
+
+An extension follows a suffix pattern, meaning that a name from left to right goes from generic to specific. It uses lowerCamelCase.
+
+**ExtensionName** = [*ProfileItIsFor*], {*FieldWithChildrenItIsIn*}, *FieldItAdds*
+**ProfileItIsFor** = Either Base Profile or **Profile** previously defined (optional if extension can occur anywhere -> Ex. NullFlavor), without the Realm.
+**FieldWithChildrenItIsIn** = Optional and Repeating, represents the **hierarchy** where the extension is to be used (optionaly if it can occur anywhere).
+**FieldItAdds** = **unique naming** for field
+
+Example: Extra patient field for "Sozialversicherungsnummer"
+```
+Profile = at-Patient -> patient
+FieldWithChildrenitIsIn = identifier -> Identifier
+FieldItAdds = Sozialversicherungsnummer -> Ssnr (or SocialSecurityNumber)
+patientIdentifierSsnr
+```
+
+Example: Extra field strength in Composition, for Allergies of a PatientSummary
+```
+Profile = PatientSummaryComposition -> patientSummaryComposition
+FieldWithChildrenitIsIn = Section Patient - Section Allergies  -> SectionPatientSubsectionAllergies (here we clarify which section, instead of writing SectionSection)
+FieldItAdds = Strength -> Strength
+patientSummaryCompositionSectionPatientSectionAllergiesStrength
+```
+
+Example: Field nullFlavor that can be added anywhere
+```
+Profile = none -> ""
+FieldWithChildrenitIsIn = any -> ""
+FieldItAdds = nullFlavor -> nullFlavor
+nullFlavor
+```
 
 ## Additional Information
 
