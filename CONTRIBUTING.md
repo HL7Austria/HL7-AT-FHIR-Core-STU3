@@ -28,8 +28,10 @@ and feel free to propose changes to this document in a pull request.
 This project and everyone participating in it is governed by HL7 Austria FHIR Technical Committee. By participating, you are expected to uphold this code. Please report unacceptable behavior to tcfhir@hl7.at.
 
 ## How Can I Contribute?
-
-- TBD (depends on results from issue #14)
+There are multiple ways of how one can contribute to the efforts of the TC FHIR from HL7 Austria:
+- Active participation on the HL7 Austria TC FHIR conference calls 
+- Creating feature requests or bug reports on github
+- For questions and broader discussions, use the TC-Austria channel on [Zulip](https://chat.fhir.org)
 
 ### Reporting Bugs
 
@@ -102,8 +104,11 @@ Most of these guidelines are suggestions, except the following rules that *must*
 A profile follows a prefix pattern, meaning that a name from left to right goes from specific to generic. It uses UpperCamelCase.
 
 **ProfileName** = [*Realm*-] *Use* , *ParentProfile*
+
 **Realm** = Is this profile supposed to be used in a realm? Then use the **countryCode**[^ISO3166-3]
+
 **Use** = What is this profile used for? **UpperCamelCase**
+
 **ParentProfile** =  Which profile does this profile extend from? **UpperCamelCase**
 
 [^ISO3166-3]: country codes are [ISO 3166-3](https://www.iso.org/iso-3166-country-codes.html) in the Alpha-2 code format, all lowercase.
@@ -129,8 +134,11 @@ PatientSummaryPatient
 An extension follows a suffix pattern, meaning that a name from left to right goes from generic to specific. It uses lowerCamelCase.
 
 **ExtensionName** = [*ProfileItIsFor*], {*FieldWithChildrenItIsIn*}, *FieldItAdds*
+
 **ProfileItIsFor** = Either Base Profile or **Profile** previously defined (optional if extension can occur anywhere -> Ex. NullFlavor), without the Realm.
+
 **FieldWithChildrenItIsIn** = Optional and Repeating, represents the **hierarchy** where the extension is to be used (optionally if it can occur anywhere).
+
 **FieldItAdds** = **unique naming** for field
 
 Example: Extra patient field for "Sozialversicherungsnummer"
@@ -159,7 +167,19 @@ nullFlavor
 
 ## Additional Information
 
-- TBD (add mail addresses and contact information)
+### Documentation of decisions on issues
+HL7 International is documenting the decision it makes on issue in it's ticket tracker tool gforge. For HL7 Austria we've decided to use their way of documenting decisions for our github issues as well. Since github issue don't provide any forms to fill out certain attributes for an issue it was decided to document the decision criteria as a comment for each issue with the following attributes:
+- **Motion:** Exact wording of the motion which will be moved.
+- **Change Type:** describes the severity of the proposed change -> HL7 International categories (Any, None, Non-substantive, Compatible-substantive, Non-compatible)
+- **(Ballot) Resolution:** final resolution -> HL7 International (ballot) categories (Persuasive, Persuasive with Mod, ...)
+- **Mover/Seconder: For-Against-Abstain:**
+
+### Information if an issue is derived from a Ballot
+Since github issue cannot be created automatically out of HL7 Austria Ballot results, it was decided to document the Ballot information as a comment for each relevant issue with the following attributes:
+- **Ballot Info:** from which ballot it came from
+
+- **Ballot Weight:** categories (and codes) from HL7 Austria ballots for a comment
+	- NEG-S (negative, serious), NEG-G (negative, minor), Z-V (approval with proposal), Z-T (approval - typo), Z-F (approval with question), Z-K (approval with comment)
 
 ## Support
 We actively monitor the issues coming in through the GitHub repository at https://github.com/HL7Austria/hl7-at-fhir-profiles/issues. You are welcome to register your bugs and feature suggestions there. For questions and broader discussions, we use the TC-Austria channel on [Zulip](https://chat.fhir.org).
