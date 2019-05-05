@@ -168,14 +168,14 @@ nullFlavor
 ## Additional Information
 
 ### Documentation of decisions on issues
-HL7 International is documenting the decision it makes on issue in it's ticket tracker tool gforge. For HL7 Austria we've decided to use their way of documenting decisions for our github issues as well. Since github issue don't provide any forms to fill out certain attributes for an issue it was decided to document the decision criteria as a comment for each issue with the following attributes:
+HL7 International is documenting the decision it makes on issues in it's ticket tracker tool gforge. For HL7 Austria we've decided to use their way of documenting decisions for our github issues as well. Since github issues don't provide any forms to fill out certain attributes for an issue it was decided to document the decision criteria as a comment for each issue with the following attributes:
 - **Motion:** Exact wording of the motion which will be moved.
 - **Change Type:** describes the severity of the proposed change -> HL7 International categories (Any, None, Non-substantive, Compatible-substantive, Non-compatible)
 - **(Ballot) Resolution:** final resolution -> HL7 International (ballot) categories (Persuasive, Persuasive with Mod, ...)
 - **Mover/Seconder: For-Against-Abstain:**
 
 ### Information if an issue is derived from a Ballot
-Since github issue cannot be created automatically out of HL7 Austria Ballot results, it was decided to document the Ballot information as a comment for each relevant issue with the following attributes:
+Since github issues cannot be created automatically out of HL7 Austria Ballot results, it was decided to document the Ballot information as a comment for each relevant issue with the following attributes:
 - **Ballot Info:** from which ballot it came from
 
 - **Ballot Weight:** categories (and codes) from HL7 Austria ballots for a comment
