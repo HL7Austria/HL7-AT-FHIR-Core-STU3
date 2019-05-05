@@ -33,7 +33,7 @@ This project and everyone participating in it is governed by HL7 Austria FHIR Te
 
 ### Reporting Bugs
 
-- TBD
+- For reporting bugs the TC FHIR created an issue template for github, it can be found [here] (https://github.com/HL7Austria/hl7-at-fhir-profiles/blob/master/.github/ISSUE_TEMPLATE/hl7-at--bug-report.md) and is available automatically if a new issue is created.
 
 #### Before Submitting A Bug Report
 
