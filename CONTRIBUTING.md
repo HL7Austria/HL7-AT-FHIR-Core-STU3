@@ -37,20 +37,38 @@ This project and everyone participating in it is governed by HL7 Austria FHIR Te
 
 #### Before Submitting A Bug Report
 
-- TBD
+- Please make sure if there isn't already an open or closed github issue in the HL7 Austria repository for the problem that you are facing. If the problem isn't directly related to HL7 Austria FHIR profiles or extensions but is more general, please also make sure that it hasn't be dealt with on the official [FHIR Chat] (https://chat.fhir.org).
 
 #### How Do I Submit A (Good) Bug Report?
 
-- TBD
+- In order to create a good bug report you will be asked to fill out a couple of questions concerning your bug, which are necessary for the TC FHIR in order to address the stated problem most effectively.  
+
+| Bug Criteria | Description |
+| --- | --- |
+| Real Submitter | Who ist the real submitter, in case the creation of the issue was done by proxy. |
+| Resource(s)/Profiles incl. Version | Which resources or profiles are affected by this bug report? |
+| Priority | Priority of this bug report (Blocker, Critical, Major, Minor, Trivial). |
+| Describe the bug | A clear and concise description of what the bug is. |
+| To Reproduce | Steps to reproduce the behavior. |
+| Expected behavior | A clear and concise description of what you expected to happen. |
 
 ### Request New Profiles/Extensions
-In order to request a new Profile or an Extension either create an issue with the label `enhancement` or email [tc-fhir](mailto:tcfhir@hl7.at)
-Use the issue to describe the intended use case and if applicable state some examples.
+- For requesting new Profiles or Extensions or features in general the TC FHIR created a feature request template for github, it can be found [here] (https://github.com/HL7Austria/hl7-at-fhir-profiles/blob/master/.github/ISSUE_TEMPLATE/hl7-at--feature-request.md) and is available automatically if a new issue is created.
+- Alternatively a new Profile or an Extension can be requested by sending an email to [tc-fhir](mailto:office@hl7.at)
+- Use the issue to describe the intended use case and if applicable state some examples.
 
 #### How Do I Submit a (Good) Enhancement
 
-- TBD
+- In order to create a good feature request you will be asked to fill out a couple of questions concerning your request, which are necessary for the TC FHIR in order to address the desired feature most effectively.
 
+| Request Criteria | Description |
+| --- | --- |
+| Real Submitter | Who ist the real submitter, in case the creation of the issue was done by proxy. |
+| Resource(s)/Profiles incl. Version | Which resources or profiles are affected by this bug report? |
+| Priority | Priority of this request (Blocker, Critical, Major, Minor, Trivial). |
+| Is your feature request related to a problem? Please describe. | A clear and concise description of what the problem is. |
+| Describe the solution you'd like | A clear and concise description of what you want to happen. |
+| Describe alternatives you've considered | A clear and concise description of any alternative solutions or features you've considered. |
 
 ## Issue and Pull Request Labels
 
