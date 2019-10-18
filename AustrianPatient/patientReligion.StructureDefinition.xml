@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://hl7.at/fhir/3.0/StructureDefinition/patientReligion" />
+  <name value="patientReligion" />
+  <status value="draft" />
+  <fhirVersion value="3.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Patient" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:code">
+      <path value="Extension.extension" />
+      <sliceName value="code" />
+    </element>
+    <element id="Extension.extension:code.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="code" />
+    </element>
+    <element id="Extension.extension:code.value[x]:valueCodeableConcept">
+      <path value="Extension.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="https://termpub.gesundheit.gv.at/TermBrowser/gui/main/main.zul?loadType=ValueSet&amp;loadName=ELGA_ReligiousAffiliation" />
+        <valueSetUri value="urn:oid:2.16.840.1.113883.2.16.1.4.1" />
+      </binding>
+    </element>
+    <element id="Extension.extension:code.value[x]:valueCodeableConcept.coding.system">
+      <path value="Extension.extension.valueCodeableConcept.coding.system" />
+      <short value="HL7 AT ReligionAustria" />
+      <fixedUri value="urn:oid:2.16.840.1.113883.2.16.1.4.1" />
+    </element>
+    <element id="Extension.extension:code.value[x]:valueCodeableConcept.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Extension.extension.valueCodeableConcept.coding.display" />
+      <short value="HL7 AT ReligionAustria" />
+      <fixedString value="HL7 AT ReligionAustria" />
+    </element>
+    <element id="Extension.extension:period">
+      <path value="Extension.extension" />
+      <sliceName value="period" />
+    </element>
+    <element id="Extension.extension:period.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="period" />
+    </element>
+    <element id="Extension.extension:period.value[x]:valuePeriod">
+      <path value="Extension.extension.valuePeriod" />
+      <sliceName value="valuePeriod" />
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.at/fhir/3.0/StructureDefinition/patientReligion" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
