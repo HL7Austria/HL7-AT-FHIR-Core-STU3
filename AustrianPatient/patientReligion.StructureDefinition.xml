@@ -43,7 +43,7 @@
       </type>
       <binding>
         <strength value="extensible" />
-        <description value="https://termpub.gesundheit.gv.at/TermBrowser/gui/main/main.zul?loadType=ValueSet&amp;loadName=ELGA_ReligiousAffiliation" />
+        <description value="https://termpub.gesundheit.gv.at:443/TermBrowser/gui/main/main.zul?loadType=CodeSystem&loadName=HL7.AT:ReligionAustria" />
         <valueSetUri value="urn:oid:2.16.840.1.113883.2.16.1.4.1" />
       </binding>
     </element>
