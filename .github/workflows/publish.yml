@@ -1,0 +1,38 @@
+# Workflow to deploy with IG Publisher to the hl7austria.github.io repository
+
+name: IGPublisher
+
+# Run on updates to the master
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+    - name: Download IG PUblisher
+      uses: Legion2/download-release-action@v2.1.0
+      with:
+        repository: HL7/fhir-ig-publisher
+        tag: '1.1.1'
+        path: .
+        file: publisher.jar
+        
+    - name: Run IG Publisher
+      run: |
+        java -jar org.hl7.fhir.publisher.jar
+        
+    - name: Deploy Implementation Guide
+      if: success()
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        external_repository: HL7Austria/hl7austria.github.io
+        publish_branch: master
+        publish_dir: ./public # TODO publish correct folder
