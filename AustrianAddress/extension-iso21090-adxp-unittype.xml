@@ -2,7 +2,6 @@
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="extension-iso21090-adxp-unittype"/>
-  <id value="iso21090-ADXP-unitType"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="fhir"/>
   </extension>
