@@ -991,7 +991,6 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Patient.extension.extension.valueCodeableConcept.coding.display" />
-      <short value="ISO 3166-1 alpha 3 2016" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -1005,7 +1004,6 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="ISO 3166-1 Country Codes" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -7115,8 +7113,6 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Patient.extension.extension.valueCodeableConcept.coding.display" />
-      <short value="ISO 3166-1 alpha 3 2016" />
-      <fixedString value="ISO 3166-1 Country Codes" />
     </element>
     <element id="Patient.extension:citizenship.extension:period">
       <path value="Patient.extension.extension" />
