@@ -828,7 +828,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator" />
+        <profile value="http://hl7.at/fhir/3.0/AustrianAddressAdditionalInformation" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -952,7 +952,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator" />
+      <fixedUri value="http://hl7.at/fhir/3.0/AustrianAddressAdditionalInformation" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1564,7 +1564,7 @@
       <short value="Attribute for additional information" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator" />
+        <profile value="http://hl7.at/fhir/3.0/AustrianAddressAdditionalInformation" />
       </type>
     </element>
     <element id="Address.line.extension:additionalInformation.valueString:valueString">
